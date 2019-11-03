@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.Settings", "XPike.Settings\XPike.Settings.csproj", "{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{40399F62-066B-4EB6-BC1A-C65AD55A90C5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPike.Settings.AspNetCore", "XPike.Settings.AspNetCore\XPike.Settings.AspNetCore.csproj", "{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{C59DB9BB-877B-4A74-92C7-6F3C84ECB73D}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		..\.gitignore = ..\.gitignore
+		..\azurepipelines.yml = ..\azurepipelines.yml
+		common.build.props = common.build.props
+		multitarget.build.props = multitarget.build.props
+		..\xpike-pacakge-icon.png = ..\xpike-pacakge-icon.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{0E643B23-78E2-4686-8E16-AB48B9218B17}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "netcore3", "netcore3", "{B1AC78F6-FF1D-4FDE-9BB6-5BE96EF95C75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{16ADFD12-18D1-43FC-8602-E89FB50BE792}"
+	ProjectSection(SolutionItems) = preProject
+		..\LICENSE = ..\LICENSE
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{218F3708-C762-42D0-8373-7EAF3345223B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98E6B9C8-DF8D-4DA6-A795-E51EAA8B4B4B} = {40399F62-066B-4EB6-BC1A-C65AD55A90C5}
+		{71F0CCA4-FA80-44ED-A4C0-6B9E09E5F5C5} = {40399F62-066B-4EB6-BC1A-C65AD55A90C5}
+		{B1AC78F6-FF1D-4FDE-9BB6-5BE96EF95C75} = {0E643B23-78E2-4686-8E16-AB48B9218B17}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4924CF9-AD57-4C78-8AC3-AC1CBBB98459}
+	EndGlobalSection
+EndGlobal
