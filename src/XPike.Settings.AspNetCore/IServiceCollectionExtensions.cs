@@ -1,5 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
+using XPike.IoC;
+using XPike.IoC.Microsoft;
 
 namespace XPike.Settings.AspNetCore
 {
@@ -9,6 +11,21 @@ namespace XPike.Settings.AspNetCore
     /// </summary>
     public static class IServiceCollectionExtensions
     {
+        /// <summary>
+        /// Registers the XPike Settings System with the DI container so that ISettings is mapp.
+        /// At some later point, we may provide a direct integration with Microsoft's IOptions.
+        /// For now, this is possible at a lower level through XPike.Configuration's integration with Microsoft's IConfiguration.
+        /// Custom configuration for specific ISettings types is provided from other extension methods in this namespace.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddXPikeSettings(this IServiceCollection services)
+        {
+            new MicrosoftDependencyCollection(services).LoadPackage(new XPike.Settings.Package());
+            
+            return services;
+        }
+
         /// <summary>
         /// Coonfigures XPike Settings to use the specified key to retrieve Settngs of TSettings.
         /// </summary>
@@ -60,6 +77,6 @@ namespace XPike.Settings.AspNetCore
         public static IServiceCollection ConfigureXPikeSettings<TSettings, TManager>(this IServiceCollection services)
             where TSettings : class
             where TManager : ISettingsManager<TSettings> =>
-            services.AddSingleton<ISettingsManager<TSettings>>();
+            services.AddSingleton<ISettingsManager<TSettings>>(provider => provider.GetService<TManager>());
     }
 }
