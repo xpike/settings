@@ -1,6 +1,6 @@
 # XPike.Settings
 
-[![Build Status](https://dev.azure.com/xpike/xpike/_apis/build/status/xpike-settings?branchName=master)](https://dev.azure.com/xpike/xpike/_build/latest?definitionId=4&branchName=master)
+[![Build Status](https://dev.azure.com/xpike/xpike/_apis/build/status/xpike.settings?branchName=master)](https://dev.azure.com/xpike/xpike/_build/latest?definitionId=6&branchName=master)
 ![Nuget](https://img.shields.io/nuget/v/XPike.Settings)
 
 Provides application settings management for xPike.
@@ -39,6 +39,18 @@ Settings Providers are fully DI-managed objects (unlike Configuration Providers)
   Injected collections **are not thread-safe**.
 
 ## Usage
+
+### Register the Package
+
+**In ASP.NET Core:**
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddXPikeDependencyInjection()
+            .AddXPikeSettings();
+}
+```
 
 ### Define your Settings POCO
 
@@ -141,7 +153,9 @@ top-level Package.
 
 ## Dependencies
 
+- `Newtonsoft.Json`
 - `XPike.Configuration`
+- `XPike.IoC`
 
 ## Building and Testing
 
@@ -152,7 +166,7 @@ Building from source and running unit tests requires a Windows machine with:
 
 ## Issues
 
-Issues are tracked on [GitHub](https://github.com/xpike/xpike-ioc/issues). Anyone is welcome to file a bug,
+Issues are tracked on [GitHub](https://github.com/xpike/xpike-settings/issues). Anyone is welcome to file a bug,
 an enhancement request, or ask a general question. We ask that bug reports include:
 
 1. A detailed description of the problem

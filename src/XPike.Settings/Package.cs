@@ -33,7 +33,7 @@ namespace XPike.Settings
             dependencies.RegisterSingleton<IConfigurationSettingsProvider, ConfigurationSettingsProvider>();
             dependencies.RegisterSingleton<ISettingsService, SettingsService>();
             dependencies.RegisterSingleton(typeof(ISettingsManager<>), typeof(DefaultSettingsManager<>));
-            dependencies.RegisterTransient(typeof(ISettings<>), typeof(SettingsLoader<>));
+            dependencies.RegisterSingleton(typeof(ISettings<>), typeof(SettingsLoader<>));
 
             // Delegate mappings...
 
